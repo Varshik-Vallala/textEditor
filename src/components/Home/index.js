@@ -14,6 +14,7 @@ import {
   UnderLineButton,
   ButtonContainer,
   TextArea,
+  ListItem,
 } from './styledComponents'
 
 class Home extends Component {
@@ -63,18 +64,33 @@ class Home extends Component {
           </div>
           <div>
             <ButtonContainer>
-              <BoldButton onClick={this.applyBold} bold={bold}>
-                <VscBold />
-              </BoldButton>
-              <ItalicButton onClick={this.applyItalic} italic={italic}>
-                <GoItalic />
-              </ItalicButton>
-              <UnderLineButton
-                onClick={this.applyUnderLine}
-                underLine={underLine}
-              >
-                <AiOutlineUnderline />
-              </UnderLineButton>
+              <ListItem>
+                <BoldButton
+                  data-testid="bold"
+                  onClick={this.applyBold}
+                  bold={bold}
+                >
+                  <VscBold />
+                </BoldButton>
+              </ListItem>
+              <ListItem>
+                <ItalicButton
+                  data-testid="italic"
+                  onClick={this.applyItalic}
+                  italic={italic}
+                >
+                  <GoItalic />
+                </ItalicButton>
+              </ListItem>
+              <ListItem>
+                <UnderLineButton
+                  onClick={this.applyUnderLine}
+                  underLine={underLine}
+                  data-testid="underline"
+                >
+                  <AiOutlineUnderline />
+                </UnderLineButton>
+              </ListItem>
             </ButtonContainer>
             <TextArea
               rows="20"

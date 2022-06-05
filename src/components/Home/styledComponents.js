@@ -29,28 +29,33 @@ export const BoldButton = styled.button`
   border: none;
   background: transparent;
   font-size: 24px;
-  color: ${props => (props.bold ? '#faff00' : ' #ffffff')};
+  color: ${props => (props.bold ? '#faff00' : ' #f1f5f9')};
 `
 
 export const ItalicButton = styled.button`
   border: none;
   background: transparent;
   font-size: 24px;
-  color: ${props => (props.italic ? '#faff00' : ' #ffffff')};
+  color: ${props => (props.italic ? '#faff00' : ' #f1f5f9')};
 `
 
 export const UnderLineButton = styled.button`
   border: none;
   background: transparent;
   font-size: 24px;
-  color: ${props => (props.underLine ? '#faff00' : ' #ffffff')};
+  color: ${props => (props.underLine ? '#faff00' : ' #f1f5f9')};
 `
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.ul`
   background: #25262c;
   border: 1px solid #334155;
   border-radius: 2px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 `
+
+export const ListItem = styled.li``
 export const TextArea = styled.textarea`
   background: #25262c;
   border: 1px solid #334155;
@@ -59,7 +64,7 @@ export const TextArea = styled.textarea`
   color: #fff;
   padding: 4px;
   font-size: 16px;
-  font-weight: ${props => (props.bold ? 'bold' : null)};
-  font-style: ${props => (props.italic ? 'italic' : null)};
-  text-decoration: ${props => (props.underLine ? 'underline' : null)};
+  font-weight: ${props => (props.bold ? 'bold' : 'normal')};
+  font-style: ${props => (props.italic ? 'italic' : 'normal')};
+  text-decoration: ${props => (props.underLine ? 'underline' : 'normal')};
 `
